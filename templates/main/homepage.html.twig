@@ -2,8 +2,8 @@
 {% block title %}Starshop: Beam up some parts!{% endblock %}
 {% block body %}
 <div>
-    <h2>My Ship</h2>
-
+    Browse through {{ ships|length * 10 }} starships!
+    
     <table>
         <tr>
             <th>Name</th>
@@ -13,10 +13,12 @@
             <th>Class</th>
             <td>{{ myShip.class }}</td>
         </tr>
+        {% if ships|length > 2 %}
         <tr>
             <th>Captain</th>
             <td>{{ myShip.captain|upper|lower|title }}</td>
         </tr>
+        {% endif %}
         <tr>
             <th>Status</th>
             <td>{{ myShip.status }}</td>
