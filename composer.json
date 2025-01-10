@@ -1,20 +1,22 @@
 {
+    "name": "symfony/skeleton",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
+    "description": "A minimal Symfony project recommended to create bare bones applications",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3.15",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "php-cs-fixer/shim": "^3.67",
+        "runtime/frankenphp-symfony": "^0.2.0",
         "symfony/console": "7.2.*",
         "symfony/dotenv": "7.2.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.2.*",
         "symfony/runtime": "7.2.*",
         "symfony/yaml": "7.2.*"
-    },
-    "require-dev": {
     },
     "config": {
         "allow-plugins": {
@@ -63,7 +65,8 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.2.*"
+            "require": "7.2.*",
+            "docker": true
         }
     }
 }
