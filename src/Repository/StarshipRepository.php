@@ -15,6 +15,7 @@ class StarshipRepository
     public function findAll(): array
     {
         $this->logger->info('Starship collection retrieved');
+
         return [
             new Starship(
                 1,
@@ -35,7 +36,8 @@ class StarshipRepository
                 'USS Wanderlust (NCC-2024-W)',
                 'Delta Tourist',
                 'Kathryn Journeyway',
-                StarshipStatusEnum::WAITING            ),
+                StarshipStatusEnum::WAITING
+            ),
         ];
     }
 
@@ -46,6 +48,7 @@ class StarshipRepository
                 return $starship;
             }
         }
+
         return null;
     }
 }
